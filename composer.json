@@ -1,46 +1,52 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "banana-dev/banana-dev",
+    "description": "A PHP client to interact with Banana's machine learning inference APIs",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "Banana", "Banana.dev", "Banana client", "API wrapper", "SDK"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/bananaml/banana-php-sdk",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Banana.dev",
+            "email": "support@banana.dev",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "php-http/discovery": "^1.17",
+        "psr/http-client-implementation": "*",
+        "psr/http-factory-implementation": "*",
+        "ramsey/uuid": "^4.7"
     },
     "require-dev": {
-        :require_dev_testing,
-        :require_dev_codestyle,
-        "spatie/ray": "^1.28"
+        "laravel/pint": "^1.0",
+        "nyholm/psr7": "^1.8",
+        "phpunit/phpunit": "^10.3.2",
+        "spatie/ray": "^1.28",
+        "symfony/http-client": "^6.3"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "BananaDev\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "BananaDev\\Tests\\": "tests"
         }
     },
     "scripts": {
-        :scripts_testing,
-        :scripts_codestyle
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage",
+        "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            :plugins_testing,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": false
         }
     },
     "minimum-stability": "dev",
