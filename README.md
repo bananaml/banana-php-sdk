@@ -1,6 +1,25 @@
-# title
+# Banana.dev PHP SDK
 
 ## Using it
+
+Refer to our [main docs](https://docs.banana.dev) for running inference with your AI apps on Banana.dev.
+Refer to our [API docs](https://docs.api.banana.dev) for interacting with the API.
+
+To get started:
+
+```sh
+composer require banana-dev/banana-dev
+```
+
+```php
+<?php
+
+use BananaDev/Client;
+use BananaDev/API;
+
+$client = new Client("your api key", "https://project-slug.run.banana.dev");
+$api = new API("your api key");
+```
 
 ## Testing
 
